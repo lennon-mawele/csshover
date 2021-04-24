@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code With Waim</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background: #000;
+      }
+      .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .menu ul{
+        display: flex;
+      }
+      .menu ul li{
+        list-style: none;
+        padding: 0px 20px;
+      }
+      .menu ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 30px;
+        position: relative;
+        text-transform: uppercase;
+      }
+      .menu ul li a::before{
+        content: '';
+        height: 4px;
+        width: 0;
+        background: #fff;
+        top: -5px;
+        left: 0;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .menu ul li:hover a:before{
+        width: 50%;
+        transform: translateX(100%);
+      }
+      .menu ul li a::after{
+        content: '';
+        height: 4px;
+        width: 0;
+        background: #fff;
+        bottom: -5px;
+        right: 0;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .menu ul li:hover a:after{
+        width: 50%;
+        transform: translateX(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Snapchat</a></li>
+        <li><a href="#">Youtube</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
